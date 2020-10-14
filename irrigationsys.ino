@@ -18,10 +18,10 @@ int state;
 //Setting up the time when we need the the pump on and off
 Time t;
 
-int OnHour = 16;
-int OnHour1 =16 ;
-int OnMin = 25;
-int OnMin1 = 27;
+int OnHour = 17;
+int OnHour1 =17 ;
+int OnMin = 05;
+int OnMin1 = 07;
 
 int current_minute = 0;
 
@@ -39,8 +39,7 @@ void setup() {
   
   // Initialize the rtc object
   rtc.begin();
-  //lcd.begin(16,2);
-  //lcd.setCursor(6,0);
+  lcd.begin(16,2);
   Serial.println("System Started...");
   sim.begin(9600);
   // The following lines can be uncommented to set the date and time
@@ -84,8 +83,7 @@ void loop() {
 
     Serial.print("\nAnalogValue: ");
     Serial.print(sensorval);
-    //percentval = map(sensorval, 1023, 200, 0, 100);
-    percentval = 50;
+    percentval = map(sensorval, 1023, 200, 0, 100);
     Serial.print("\nPercentval: ");
     Serial.print(percentval);
     Serial.println(" ");
@@ -126,10 +124,10 @@ void loop() {
   }
  
   delay (1000);
-   //lcd.setCursor(3,0);
-   //lcd.print(T);
-   //lcd.setCursor(7,1);
-   //lcd.print(percentval);
+   lcd.setCursor(3,0);
+   lcd.print(T);
+   lcd.setCursor(7,1);
+   lcd.print(percentval);
    
 }
 
