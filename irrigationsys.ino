@@ -172,6 +172,8 @@ void loop() {
       delay(1000);
       _buffer = _readSerial();
     }
+
+    //This can be commented out if you don't need a buffer
     
     String _readSerial() {
       _timeout = 0;
