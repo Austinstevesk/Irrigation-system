@@ -83,7 +83,7 @@ void loop() {
 
     Serial.print("\nAnalogValue: ");
     Serial.print(sensorval);
-    percentval = map(sensorval, 1023, 200, 0, 100);
+    percentval = map(sensorval, 1023, 200, 0, 100); //convert moisture value to percentage
     Serial.print("\nPercentval: ");
     Serial.print(percentval);
     Serial.println(" ");
