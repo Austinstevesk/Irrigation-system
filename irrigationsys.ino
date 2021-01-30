@@ -66,7 +66,7 @@ void loop() {
   
   // Send date
   lcd.setCursor(1,0);
-  Serial.print(rtc.getDateStr());
+  Serial.print(rtc.getDateStr()); //gets time from RTC module
   Serial.print(" -- ");
   lcd.print(rtc.getDateStr());
   lcd.print("--");
